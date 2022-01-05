@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;400&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;400&family=VT323&display=swap");
 :root{
     --main-text-font:'Encode Sans Semi Expanded', sans-serif;
     --logo-text-font:'VT323', monospace;
-    --main-color: #95a8c5
+    --main-color: #82afef
 }
 *{
     margin: 0;
@@ -24,14 +24,17 @@ li{
     display: flex;
     flex-wrap: wrap;
 }
-header{
-    background-image:url("anh_nen_xanh.jpg") ;
+header {
+
+
+    background-image:url("anhnen1.jpg" ) ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
     position: relative;
+
 }
 .bg-image{
     position: absolute;
@@ -51,7 +54,7 @@ header{
     padding: 12px 0;
     align-items: center;
 }
-.header-top ul{
+.header-top > ul{
     display: flex ;
 }
 .header-top ul li{
@@ -64,7 +67,7 @@ header{
     display: block;
     bottom: -2px;
     height: 3px;
-    width: 0%;
+    width: 0;
     left: 50%;
     transform:translateX(-50%) ;
     background-color: var(--main-color);
@@ -85,6 +88,34 @@ header{
     letter-spacing: 2px ;
     font-weight: bold;
 }
+.sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #cccccc;
+    display: none;
+}
+
+
+.others{
+    flex: 1;
+    display: flex;
+}
+.others>li{
+    padding: 0 12px;
+}
+.others>li:first-child{
+    position: relative;
+}
+.others>li:first-child input{
+    width: 100%;
+}
+.others>li:first-child i{
+    position: absolute;
+    right: 10px;
+}
+
+
+
 .header-text{
     position: absolute;
     top: 50%;
@@ -115,13 +146,20 @@ header{
     cursor: pointer;
     font-size: 20px;
     transition: all 0.5s ease;
+    border-radius: 20px;
+
 }
 .header-text button:hover{
     background-color: var(--main-color);
 }
+/*---------------------course---------------*/
 
 .course {
-    padding: 50px;
+    background-image: url("anhnen4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 110px;
 }
 .course h1{
     font-family: var(--main-text-font) ;
@@ -135,8 +173,7 @@ header{
 .course-item1{
     width: 30%;
     text-align: center;
-    background-image: url("anh_sua_chua.jpg");
-    background-position: center;
+    background-color: #121b28;
     padding: 20px 30px;
     border-radius: 5px;
     transition: all 0.5s ease;
@@ -145,14 +182,14 @@ header{
     color: aliceblue;
 }
 .course-item1 p{
-    color: var(--main-color);
+    color: white;
     text-align: left;
 }
 .course-item2{
      width: 30%;
      text-align: center;
-     background-image: url("dong_son.jpg");
-     background-position: center;
+    background-color: #121b28;
+    background-size: cover;
      padding: 20px 30px;
      border-radius: 5px;
     transition: all 0.5s ease;
@@ -161,14 +198,13 @@ header{
     color: aliceblue;
 }
 .course-item2 p{
-    color: var(--main-color);
+    color: white;
     text-align: left;
 }
 .course-item3{
     width: 30%;
     text-align: center;
-    background-image: url("noi_that.jpg");
-    background-position: center;
+    background-color: #121b28;
     padding: 20px 30px;
     border-radius: 5px;
     transition: all 0.5s ease;
@@ -177,7 +213,7 @@ header{
     color: aliceblue;
 }
 .course-item3 p{
-    color: var(--main-color);
+    color: white;
     text-align: left;
 }
 .course-item1:hover{
@@ -188,4 +224,90 @@ header{
 }
 .course-item3:hover{
     box-shadow: 10px 10px 5px 5px #dddddd;
+}
+/*---------------brand------------*/
+
+.brand{
+    padding: 50px 0;
+    background-image: url("anh_nen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.brand h1{
+    font-family: var(--main-text-font) ;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #95a8c5;
+}
+.brand-items{
+    justify-content: space-between;
+}
+.brand-item{
+
+    width: 30%;
+    text-align: center;
+    background-color: #121b28;
+    padding: 20px 30px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+}
+.brand-item img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.brand-item h2{
+    color: aliceblue;
+}
+.brand-item :hover{
+    transform: scale(1.1);
+}
+.brand-item p{
+    color: aliceblue;
+    text-align: left;
+}
+/*----map----------*/
+.map{
+    background-image:url("anhnen7.jpg" ) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    margin-top: -50px;
+
+}
+.map p{
+    color: aliceblue;
+    text-align:left ;
+    /*width: 50%;*/
+    /*margin: 0 auto;*/
+}
+/*---------footer-----------*/
+footer{
+    text-align: center;
+    background-color: #121b28;
+    background-size: cover;
+    padding: 50px 0 6px;
+}
+footer h1{
+    font-family: var(--main-text-font);
+    color: #95a8c5;
+    margin-bottom: 30px;
+}
+footer p {
+    font-family: var(--main-text-font);
+    color: #95a8c5;
+}
+footer i{
+    margin-top: 15px;
+    color: var(--main-color);
+    font-size: 25px;
+    cursor: pointer;
+
+}
+footer span{
+    color: red;
 }
